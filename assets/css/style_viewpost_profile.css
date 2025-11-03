@@ -1,0 +1,83 @@
+/* aturan umum */
+.post-image {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+  
+  /* untuk gambar landscape: lebarnya maksimal full container, tinggi disesuaikan */
+  .post-image.landscape {
+    width: 60%;
+    height: auto;
+    max-height: 700px; /* atur sesuai kebutuhan */
+  }
+  
+  /* untuk gambar portrait: batasi tinggi supaya tidak terlalu memanjang */
+  .post-image.portrait {
+    width: auto;
+    max-width: 100%;
+    max-height: 500px; /* batasi tinggi portrait */
+  }
+  
+  /* opsional: responsif kecil layar */
+  @media (max-width: 600px) {
+    .post-image.landscape { max-height: 400px; }
+    .post-image.portrait  { max-height: 300px; }
+  }
+
+  .back-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 18px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  .post {
+    max-width: 1100px;     /* batas lebar agar tetap enak dibaca */
+    margin: 40px auto;
+    text-align: left;    /* tetap di tengah halaman secara keseluruhan */
+    line-height: 1.6;     /* biar paragraf enak dibaca */
+  }
+  .post-header {
+    text-align: center;
+  }
+  .post-content-wrapper {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .post-actions {
+    margin-top: 20px;
+}
+
+.mybtn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 8px;
+    background-color: #4e73df;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.mybtn:hover {
+    opacity: 0.85;
+}
+
+.mybtn-delete {
+    background-color: #e74a3b;
+}
+
+.mybtn-edit {
+    background-color: #1cc88a;
+}

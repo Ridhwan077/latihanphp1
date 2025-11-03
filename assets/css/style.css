@@ -1,0 +1,362 @@
+/*RESET & BASE*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif; 
+  background: #fafafa;
+  padding-top: 100px;
+  text-align: center;
+  color: #222;
+}
+
+main {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.login-container h2 {
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #000;
+  outline: none;
+}
+
+button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #333;
+}
+
+/*HEADER / MENU*/
+.menu {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px 40px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  margin-left: 25px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #111;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #111;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/*MAIN WRAPPER*/
+main {
+  max-width: 900px;
+  margin: 80px auto; /* ✅ tambah jarak atas bawah biar lega */
+  padding: 50px 30px; /* ✅ lebih longgar */
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+main h2 {
+  margin-bottom: 40px; /* ✅ kasih jarak antar judul & isi */
+}
+
+hr {
+  width: 50%;               /* cuma setengah halaman */
+  margin: 15px auto 25px;   /* kasih jarak atas-bawah & posisi tengah */
+  border: none;             /* hapus garis default */
+  border-top: 1px solid rgba(0, 0, 0, 0.15); /* garis halus */
+  border-radius: 1px;
+}
+
+/*FORM*/
+form {
+  text-align: left;
+  max-width: 500px;
+  margin: 40px auto; /* ✅ jarak atas bawah ditambah */
+  background: #f1f1f1;
+  padding: 30px 40px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;               /* jarak antar elemen */
+  width: 250px;
+  margin: 20px auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px; /* jarak antar form pas */
+  width: 50%; /* biar gak kepanjangan */
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input[type="date"],
+input[type="file"] {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="date"]:focus,
+input[type="file"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 4px rgba(108, 99, 255, 0.3);
+  outline: none;
+}
+
+.form-input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 4px rgba(108, 99, 255, 0.3);
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/*BLOG*/
+.blog {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.blog-item {
+  width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.blog-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.blog-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.caption {
+  margin: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+/*POST*/
+.post-title {
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+}
+
+.post-date {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 25px; /* ✅ tambah jarak dari isi */
+}
+
+.post-content-wrapper {
+  display: inline-block;
+  text-align: justify;
+  max-width: 650px; /* ✅ sedikit lebih lebar biar nyaman */
+  margin-bottom: 50px; /* ✅ biar footer gak terlalu nempel */
+}
+
+.post-content {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+/* FOOTER*/
+footer {
+  background: #fff;
+  color: #666;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .blog-item {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  main {
+    padding: 30px 20px;
+    margin: 100px 10px; /* ✅ responsive spacing */
+  }
+}
